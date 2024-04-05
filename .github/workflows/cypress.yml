@@ -11,9 +11,9 @@ jobs:
           node-version: '14'
       - run: npm install
       - run: npx cypress run
-      uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v4
         # add the line below to store screenshots only on failures
-      - if: failure()
+        if: failure()
         with:
           name: cypress-screenshots
           path: cypress/screenshots
