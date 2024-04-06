@@ -11,5 +11,5 @@ module.exports = {
               "categories:accessibility": ["error", {"minScore": 1}]
             }
         }
-    },
+    }
   };
