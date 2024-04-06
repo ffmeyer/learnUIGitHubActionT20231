@@ -12,13 +12,14 @@ jobs:
       - run: npm install
       - run: npx cypress run
       - uses: actions/upload-artifact@v4
-        # add the line below to store screenshots only on failures
+        # add the line below to store screenshots only on failures        
         if: failure()
         with:
           name: cypress-screenshots
           path: cypress/screenshots
           if-no-files-found: ignore # 'warn' or 'error' are also available, defaults to `warn`
       - uses: actions/upload-artifact@v4
+      # if: always() para sempre gerar o video independente do resultado do teste
         with:
           name: cypress-videos
           path: cypress/videos
